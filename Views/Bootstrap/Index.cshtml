@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Bootstrap</h2>
+
+<div style="display:inline;">
+    <button id="Collapse" class="btn btn-primary" type="button" onclick="Clickcollapse(this)" data-toggle="collapse" data-target="#collapseResult" aria-expanded="false" aria-controls="collapseResult">
+        Collapse
+    </button>
+    <div class="collapse" id="collapseResult" style="width:20%;">
+
+    </div>
+    <div style="display:inline;">
+        <button id="Alert" class="btn btn-primary" type="button" onclick="ClickAlert(this)" data-toggle="collapse" data-target="#AlertResult" aria-expanded="false" aria-controls="AlertResult">
+            Alert
+        </button>
+        <div class="" id="AlertResult">
+        </div>
+    </div>
+
+
+
+        <script>
+      function Clickcollapse(obj)
+    {
+        $("[aria-expanded=true]").each(function (key, obj) {
+            var tes = $(obj).attr("aria-expanded");
+            //alert(tes);
+            if (tes) {
+                $($(obj).attr("data-target")).collapse("toggle");
+            }
+        });
+        var isExpanded = $(obj).attr("aria-expanded");
+        var target = $(obj).attr("data-target");
+
+    $.ajax({
+        type: "get",
+        url: "@Url.Action("Collapse", "Bootstrap")",
+        success: function (d) {
+            $(target).html(d);
+            $(target).collapse("toggle");
+        }
+    });
+    };
+
+
+    function ClickAlert(obj)
+    {
+        $("[aria-expanded=true]").each(function (key, obj) {
+            var tes = $(obj).attr("aria-expanded");
+            //alert(tes);
+            if (tes) {
+                $($(obj).attr("data-target")).collapse("toggle");
+                //alert($(obj).attr("data-target"));
+            }
+        });
+
+        var isExpanded = $(obj).attr("aria-expanded");
+        var target = $(obj).attr("data-target");
+
+    $.ajax({
+        type: "get",
+        url: "@Url.Action("Alert", "Bootstrap")",
+        success: function (d) {
+            $(target).html(d);
+            $(target).collapse("toggle");
+        }
+    });
+    };
+
+        </script>
+
+        @*<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
