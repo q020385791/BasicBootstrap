@@ -13,7 +13,7 @@
                         <button type="button" class="btn btn-outline-danger">Danger</button>
                     </div>
                         
-                    <div>
+                    <div >
                         <button type="button" class="btn btn-outline-warning">Warning</button>
                         <button type="button" class="btn btn-outline-info">Info</button>
                         <button type="button" class="btn btn-outline-light">Light</button>
@@ -49,8 +49,102 @@
                     <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
                         無效果
                     </button>
+                </td>
+                <td style="border-color:black;border-width:1px; border-style:double">
+                    <p>多重選擇按鈕</p>
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary ">
+                            <input type="checkbox" checked> Checked
+                        </label>
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary ">
+                                <input type="checkbox" checked> Checked
+                            </label>
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary ">
+                                    <input type="checkbox" checked> Checked
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </td>
 
-
+                <td style="border-color:black;border-width:1px; border-style:double">
+                    <p>限制單選</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="options" id="option1" checked> Active
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option2"> Radio
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option3"> Radio
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-color:black;border-width:1px; border-style:double">
+                    <p>按鈕群組工具列 role="group"，用aria-label 做不同群組的分組區別</p>
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group mr-2" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-secondary">1</button>
+                            <button type="button" class="btn btn-secondary">2</button>
+                            <button type="button" class="btn btn-secondary">3</button>
+                            <button type="button" class="btn btn-secondary">4</button>
+                        </div>
+                        <div class="btn-group mr-2" role="group" aria-label="Second group">
+                            <button type="button" class="btn btn-secondary">5</button>
+                            <button type="button" class="btn btn-secondary">6</button>
+                            <button type="button" class="btn btn-secondary">7</button>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Third group">
+                            <button type="button" class="btn btn-secondary">8</button>
+                        </div>
+                    </div>
+                    <br />
+                    <p>可混和不同的標籤</p>
+                    <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group mr-2" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-secondary">1</button>
+                            <button type="button" class="btn btn-secondary">2</button>
+                            <button type="button" class="btn btn-secondary">3</button>
+                            <button type="button" class="btn btn-secondary">4</button>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon">#</div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                        </div>
+                    </div>
+                </td>
+                <td style="border-color:black;border-width:1px; border-style:double">
+                    <p>可以套用不同功能的標籤</p>
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <button type="button" class="btn btn-secondary">1</button>
+                        <button type="button" class="btn btn-secondary">2</button>
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td style="border-color:black;border-width:1px; border-style:double">
+                    <p>直行按鈕群組設定</p>
+                    <p>btn-group-vertical</p>
+                    <div class="btn-group-vertical">
+                        <button type="button" class="btn btn-secondary">1</button>
+                        <button type="button" class="btn btn-secondary">2</button>
+                        <button type="button" class="btn btn-secondary">3</button>
+                        <button type="button" class="btn btn-secondary">4</button>
+                    </div>
                 </td>
             </tr>
         </table>
