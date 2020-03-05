@@ -1,0 +1,61 @@
+﻿
+   
+    <div class="card card-body" style="width:60%">
+
+        <table style="border-color:black;border-width:1px; border-style:double">
+            <tr>
+                <td style="border-color:black;border-width:1px; border-style:double">
+                    <p>基本按鈕</p>
+                    <div>
+                        <button type="button" class="btn btn-outline-primary">Primary</button>
+                        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                        <button type="button" class="btn btn-outline-success">Success</button>
+                        <button type="button" class="btn btn-outline-danger">Danger</button>
+                    </div>
+                        
+                    <div>
+                        <button type="button" class="btn btn-outline-warning">Warning</button>
+                        <button type="button" class="btn btn-outline-info">Info</button>
+                        <button type="button" class="btn btn-outline-light">Light</button>
+                        <button type="button" class="btn btn-outline-dark">Dark</button>
+
+                    </div>
+                        
+                    
+                </td>
+                <td style="border-color:black;border-width:1px; border-style:double">
+                    <p>格式不同的按鈕</p>
+                    <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                    <button type="button" class="btn btn-primary btn-sm">small button</button>
+                </td>
+                <td style="border-color:black;border-width:1px; border-style:double">
+                    <p>滿版按鈕</p>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+                </td>
+                <td style="border-color:black;border-width:1px; border-style:double">
+                    <p>狀態按鈕(其實還是可以按，只是通常不會在Disable底下寫事件)</p>
+                    <button type="button" class="btn btn-primary btn-lg ">Active Button </button>
+                    <button type="button" class="btn btn-primary btn-lg disabled">Disable Button </button>
+                </td>
+            </tr>
+            <tr>
+                
+                <td style="border-color:black;border-width:1px; border-style:double">
+                    <p>直接經過不給反應，添加 屬性aria-disabled="true"</p>
+                    <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">You can't touch me</a>
+                </td>
+                <td style="border-color:black;border-width:1px; border-style:double">
+                    <p>不懂他要做啥</p>
+                    <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                        無效果
+                    </button>
+
+
+                </td>
+            </tr>
+        </table>
+       
+        
+
+        
+    </div>

@@ -3,6 +3,8 @@
     ViewBag.Title = "Index";
 }
 
+
+
 <h2>Bootstrap</h2>
 
 <div style="display:inline;">
@@ -12,22 +14,48 @@
     <div class="collapse" id="collapseResult" style="width:20%;">
 
     </div>
+
     <div style="display:inline;">
         <button id="Alert" class="btn btn-primary" type="button" onclick="ClickAlert(this)" data-toggle="collapse" data-target="#AlertResult" aria-expanded="false" aria-controls="AlertResult">
             Alert
         </button>
-        <div class="" id="AlertResult">
+        <div class="collapse" id="AlertResult">
+        </div>
+    </div>
+
+    <div style="display:inline;">
+        <button id="Badges" class="btn btn-primary" type="button" onclick="ClickBadges(this)" data-toggle="collapse" data-target="#BadgesResult" aria-expanded="false" aria-controls="BadgesResult">
+            Badges
+        </button>
+        <div class="collapse" id="BadgesResult">
         </div>
     </div>
 
 
+    <div style="display:inline;">
+        <button id="Breadcrumb" class="btn btn-primary" type="button" onclick="ClickBreadcrumb(this)" data-toggle="collapse" data-target="#BreadcrumbResult" aria-expanded="false" aria-controls="BreadcrumbResult">
+            Breadcrumb
+        </button>
+        <div class="collapse" id="BreadcrumbResult">
+        </div>
+    </div>
 
-        <script>
-      function Clickcollapse(obj)
+    <div style="display:inline;">
+        <button id="Buttons" class="btn btn-primary" type="button" onclick="ClickButtons(this)" data-toggle="collapse" data-target="#ButtonsResult" aria-expanded="false" aria-controls="ButtonsResult">
+            Buttons
+        </button>
+        <div class="collapse" id="ButtonsResult">
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+function Clickcollapse(obj)
     {
         $("[aria-expanded=true]").each(function (key, obj) {
             var tes = $(obj).attr("aria-expanded");
-            //alert(tes);
             if (tes) {
                 $($(obj).attr("data-target")).collapse("toggle");
             }
@@ -46,14 +74,12 @@
     };
 
 
-    function ClickAlert(obj)
+function ClickAlert(obj)
     {
         $("[aria-expanded=true]").each(function (key, obj) {
             var tes = $(obj).attr("aria-expanded");
-            //alert(tes);
             if (tes) {
                 $($(obj).attr("data-target")).collapse("toggle");
-                //alert($(obj).attr("data-target"));
             }
         });
 
@@ -70,8 +96,71 @@
     });
     };
 
-        </script>
 
-        @*<script src="~/Scripts/jquery-3.4.1.min.js"></script>
-        <script src="~/Scripts/bootstrap.min.js"></script>
-        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+function ClickBadges(obj)
+    {
+        $("[aria-expanded=true]").each(function (key, obj) {
+            var tes = $(obj).attr("aria-expanded");
+            if (tes) {
+                $($(obj).attr("data-target")).collapse("toggle");
+            }
+        });
+        var isExpanded = $(obj).attr("aria-expanded");
+        var target = $(obj).attr("data-target");
+    $.ajax({
+        type: "get",
+        url: "@Url.Action("Badges", "Bootstrap")",
+        success: function (d) {
+            $(target).html(d);
+            $(target).collapse("toggle");
+        }
+    });
+    };
+
+function ClickBreadcrumb(obj)
+    {
+        $("[aria-expanded=true]").each(function (key, obj) {
+            var tes = $(obj).attr("aria-expanded");
+            if (tes) {
+                $($(obj).attr("data-target")).collapse("toggle");
+            }
+        });
+
+        var isExpanded = $(obj).attr("aria-expanded");
+        var target = $(obj).attr("data-target");
+    $.ajax({
+        type: "get",
+        url: "@Url.Action("Breadcrumb", "Bootstrap")",
+        success: function (d) {
+            $(target).html(d);
+            $(target).collapse("toggle");
+        }
+    });
+    };
+
+
+
+function ClickButtons(obj)
+    {
+        $("[aria-expanded=true]").each(function (key, obj) {
+            var tes = $(obj).attr("aria-expanded");
+            if (tes) {
+                $($(obj).attr("data-target")).collapse("toggle");
+            }
+        });
+        var isExpanded = $(obj).attr("aria-expanded");
+        var target = $(obj).attr("data-target");
+    $.ajax({
+        type: "get",
+        url: "@Url.Action("Buttons", "Bootstrap")",
+        success: function (d) {
+            $(target).html(d);
+            $(target).collapse("toggle");
+        }
+    });
+    };
+</script>
+
+@*<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@

@@ -187,6 +187,9 @@
     <Content Include="Views\Bootstrap\Collapse.cshtml" />
     <Content Include="Views\Bootstrap\Collapse2.cshtml" />
     <Content Include="Views\Bootstrap\Alert.cshtml" />
+    <Content Include="Views\Bootstrap\Badges.cshtml" />
+    <Content Include="Views\Bootstrap\Breadcrumb.cshtml" />
+    <Content Include="Views\Bootstrap\Buttons.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

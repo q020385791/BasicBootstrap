@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>首頁</h2>
+<h2>BootStrape基本使用整理</h2>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">首頁<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="~/Test1/Index">首頁<span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item">
@@ -48,16 +48,12 @@
 
 
 </nav>
-
-
-
-
+@*分頁顯示區*@
 <div id="ClickResult">
-
 
 </div>
 
-<button id="btn1" type="button" class="btn btn-primary">ttt</button>
+<button id="btn1" type="button" class="btn btn-primary">首頁說明(建置中)</button>
 
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
 <script src="~/Scripts/bootstrap.min.js"></script>
@@ -67,7 +63,20 @@
 
 
     });
-    //換頁面Ajax
+//換頁面Ajax
+//Bootstrape練習頁
+function ClickBootstrape()
+{
+        $.ajax({
+            type: "get",
+            url: "@Url.Action("Index", "Bootstrap")",
+            success: function (d) {
+                $("#ClickResult").html(d);
+            }
+        });
+    };
+
+//工具堆
 function ClickCHeckIP()
 {
     $.ajax({
@@ -78,7 +87,6 @@ function ClickCHeckIP()
         }
     });
 };
-
 function ClickCheckTime()
 {
     $.ajax({
@@ -100,15 +108,5 @@ function ClickCheckTime()
         });
     };
 
-function ClickBootstrape()
-{
-        $.ajax({
-            type: "get",
-            url: "@Url.Action("Index", "Bootstrap")",
-            success: function (d) {
-                $("#ClickResult").html(d);
-            }
-        });
-};
 
 </script>

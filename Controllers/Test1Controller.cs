@@ -12,7 +12,7 @@ namespace testMVC.Controllers
         // GET: Test1
         public ActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
         public ActionResult CheckIP()

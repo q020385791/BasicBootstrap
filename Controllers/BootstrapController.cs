@@ -11,7 +11,7 @@ namespace testMVC.Controllers
         // GET: Bootscrap
         public ActionResult Index()
         {
-            return View();
+            return PartialView("Index");
         }
         public ActionResult Collapse()
         {
@@ -21,5 +21,22 @@ namespace testMVC.Controllers
         {
             return PartialView("Alert");
         }
+        public ActionResult Badges()
+        {
+            return PartialView("Badges");
+        }
+        public ActionResult Breadcrumb()
+        {
+            return PartialView("Breadcrumb");
+        }
+
+        public ActionResult Buttons()
+        {
+            return PartialView("Buttons");
+        }
+        
+
+
+
     }
 }
