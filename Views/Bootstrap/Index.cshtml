@@ -47,6 +47,13 @@
         <div class="collapse" id="ButtonsResult">
         </div>
     </div>
+    <div style="display:inline;">
+        <button id="Carousel" class="btn btn-primary" type="button" onclick="ClickCarousel(this)" data-toggle="collapse" data-target="#CarouselResult" aria-expanded="false" aria-controls="CarouselResult">
+            Carousel
+        </button>
+        <div class="collapse" id="CarouselResult">
+        </div>
+    </div>
 </div>
 
 
@@ -159,8 +166,25 @@ function ClickButtons(obj)
         }
     });
     };
-</script>
 
-@*<script src="~/Scripts/jquery-3.4.1.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+
+function ClickCarousel(obj)
+    {
+        $("[aria-expanded=true]").each(function (key, obj) {
+            var tes = $(obj).attr("aria-expanded");
+            if (tes) {
+                $($(obj).attr("data-target")).collapse("toggle");
+            }
+        });
+        var isExpanded = $(obj).attr("aria-expanded");
+        var target = $(obj).attr("data-target");
+    $.ajax({
+        type: "get",
+        url: "@Url.Action("Carousel", "Bootstrap")",
+        success: function (d) {
+            $(target).html(d);
+            $(target).collapse("toggle");
+        }
+    });
+    };
+</script>

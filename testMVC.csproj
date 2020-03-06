@@ -142,11 +142,18 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Img\p01.jpg" />
+    <Content Include="Img\p02.jpg" />
+    <Content Include="Img\p03.jpg" />
+    <Content Include="Img\p10.jfif" />
+    <Content Include="Img\p20.jfif" />
+    <Content Include="Img\p30.jfif" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\popper.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -190,6 +197,7 @@
     <Content Include="Views\Bootstrap\Badges.cshtml" />
     <Content Include="Views\Bootstrap\Breadcrumb.cshtml" />
     <Content Include="Views\Bootstrap\Buttons.cshtml" />
+    <Content Include="Views\Bootstrap\Carousel.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

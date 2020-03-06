@@ -12,9 +12,11 @@ namespace testMVC
                         "~/Content/bootstrap.min.css"
                         ));
             bundles.Add(new ScriptBundle("~/Content/js").Include(
+                        "~/Scripts/popper.min.js",
                         "~/Scripts/jquery-3.4.1.min.js",
-                        "~/Scripts/bootstrap.bundle.js",
+                        //"~/Scripts/bootstrap.bundle.js"
                         "~/Scripts/bootstrap.min.js"
+                        
                         ));
 
             //bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(

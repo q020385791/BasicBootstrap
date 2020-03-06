@@ -36,7 +36,10 @@ namespace testMVC.Controllers
         }
         
 
-
+            public ActionResult Carousel()
+        {
+            return PartialView("Carousel");
+        }
 
     }
 }
